@@ -1,0 +1,31 @@
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
+
+[TestClass()]
+public class TodoItemTest
+{
+    [TestMethod()]
+    public void ToString_ReturnsCorrectly()
+    {
+        //Arrange
+        int id = 0;
+        string text = "Foo the bar";
+        TodoItem todo = new TodoItem(id, text);
+
+        string expected = "#0 Foo the bar";
+        //Act
+        string text = todo.ToString();
+        //Assert
+        Assert.AreEqual(text,expected);
+    }
+}
+
+
+
+Fikk ikke tak i VisualStudio på Linux. Klarte bare å finne Visual Studio Code.
+Her fikk jeg ikke til å bruke namespacet Microsoft.VisualStudio.TestTools.UnitTesting;
+Som gjorde det vanskelig å teste.
+
+
+Over er en test som viser enkel testing av ToString funksjonen til TodoItem.
+
