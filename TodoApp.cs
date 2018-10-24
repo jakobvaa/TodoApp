@@ -105,8 +105,8 @@ namespace dips {
                         break;
 
                     case "ADD":
-                        answer.Remove (0, 4);
-                        app.Add (answer);
+                        string task = answer.Remove (0, 4);
+                        app.Add (task);
                         break;
 
                     case "PRINT":
